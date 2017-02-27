@@ -1,6 +1,6 @@
 var express = require('express');
 
-var app = express.createServer(express.logger());
+var app = express(express.logger());
 
 app.get('*', function(request, response) {
   response.redirect(301, process.env.NEW_BASE_URL + request.url)
